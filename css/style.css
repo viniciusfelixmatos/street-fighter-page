@@ -42,7 +42,7 @@
 .introduction-area {
     height: 100vh;
     width: 100%;
-    background-image: url(images/main-img.png);
+    background-image: url(../images/main-img.png);
     background-size: contain;
 }
 
@@ -52,7 +52,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-image: url(./images/about-img.png);
+    background-image: url(../images/about-img.png);
     height: 50vh;
 }
 

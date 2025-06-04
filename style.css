@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+}
+
+/* HEADER */
+
+.header-area {
+    background-color: black;
+    border-bottom: 2px solid #FFFF;
+}
+
+.header-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.links-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.links-box a {
+    color: #FFFF;
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.links-box a:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+    transition: all 0.4s ease;
+}
+
+/* Introduction box */
+
+.introduction-area {
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/main-img.png);
+    background-size: contain;
+}
+
+/* about-area */
+
+.about-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: url(./images/about-img.png);
+    height: 50vh;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.about-box {
+    color: #FFFF;
+    max-width: 440px;
+}
+
+.about-box h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 75px;
+}
+
+.about-box h3::after {
+    content: "";
+    display: block;
+    text-align: center;
+    width: 100%;
+    border-top: 5px solid #FFFF;
+    opacity: 1;
+}
+
+.about-box p {
+    text-align: justify;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+}
+
+.btn-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-default {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    max-height: 60px;
+    background-color: #FFFF;
+    border: 1px solid black;
+    
+}
+
+.btn-default span {
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+}

@@ -37,13 +37,29 @@
     transition: all 0.4s ease;
 }
 
+.hamburguer-icon {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburguer-icon a:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.hamburguer-icon a i {
+    font-size: 2rem;
+    color: #FFFF;
+}
+
 /* Introduction box */
 
 .introduction-area {
     height: 100vh;
     width: 100%;
     background-image: url(../images/main-img.png);
-    background-size: contain;
+    background-size: cover;
 }
 
 /* about-area */
@@ -116,4 +132,115 @@
     font-weight: bold;
     text-decoration: none;
     color: #000000;
+}
+
+/* Characters Area */
+
+.characters-area {
+    background-image: url(../images/backgorund-cards.png);
+}
+
+.characters-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.characters-header h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 75px;
+    color: #FFFF;
+}
+
+.box-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    max-height: 600px;
+    border: 1px solid red
+}
+
+.box-images img {
+    width: 300px;
+    height: 600px;
+    object-fit: cover;
+}
+
+/* Gallery */
+
+.gallery-images {
+    background-color: black;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.gallery-container h3 {
+    font-size: 75px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    color: #FFFF;
+    text-shadow:hsl(from black h s l)
+}
+
+.box-gallery {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.gallery-boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-boxes img {
+    width: 400px;
+    height: 225px;
+}
+
+.container {
+    padding: 2rem
+}
+
+.col-sm {
+    align-items: center;
+    justify-items: center;
+}
+
+/* Media Queries */
+
+@media (max-width: 425px) {
+
+    .links-box {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hamburguer-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gallery-boxes img {
+        width: 200px;
+        height: 125px;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .characters-header h3 {
+        font-size: 48px;
+    }
 }

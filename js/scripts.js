@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (links.style.display == "flex") {
             links.style.display = "none";
         } else {
-            links.style.display = "block"
+            links.style.display = "flex"
         };
     });
 

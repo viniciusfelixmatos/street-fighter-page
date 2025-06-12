@@ -5,8 +5,12 @@
 /* HEADER */
 
 .header-area {
-    background-color: black;
+    position: fixed;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(69, 33, 138, 1));
+    background-color: #000;
     border-bottom: 2px solid #FFFF;
+    z-index: 2;
 }
 
 .header-box {
@@ -56,13 +60,15 @@
 /* Introduction box */
 
 .introduction-area {
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     align-items: center;
     text-align: center;
     justify-items: center;
     background-image: url(../images/main-img.png);
-    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
 
 }
 
@@ -92,7 +98,7 @@
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 75px;
-    text-shadow: 1px 1px 2px pink; 
+    text-shadow: 4px 4px #000;
 }
 
 .about-box h3::after {
@@ -148,9 +154,9 @@
 
 .characters-area {
     background-image: url(../images/backgorund-cards.png);
-    background-size: auto;
-    box-shadow: inset  0 -5px -15px rgba(0, 0, 0, 0.6);
-    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
 }
 
 .characters-header {
@@ -164,8 +170,7 @@
     font-weight: bold;
     font-size: 75px;
     color: #FFFF;
-    box-shadow: 10px 7px 10px pink;
-
+    text-shadow: 4px 4px #000;
 }
 
 .box-images {
@@ -177,13 +182,13 @@
     max-height: 600px;
     box-shadow: 10px 5px 50px black;
     cursor: pointer;
-
+    z-index: 1;
     margin-bottom: 20px;
 }
 
 .box-images:hover {
     transform: scale(1.1);
-    transition: 0.5s ease;
+    transition: all 0.5s ease-out;
 }
 
 .box-images img {
@@ -211,7 +216,7 @@
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     color: #FFFF;
-    text-shadow:hsl(from black h s l)
+    text-shadow: 4px 4px #000;
 }
 
 .box-gallery {

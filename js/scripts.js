@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Scroll Elements
+    // ===== Scroll Elements =====
     const inicio = document.getElementById('inicio-scrol');
     const inicioin = document.getElementById('introduction-in');
 
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const galeria = document.getElementById('galeria-scrol');
     const galeriain = document.getElementById('gallery-in');
 
-    // Botão Hamburguer
+    // ===== Botão Hamburguer =====
     const icon = document.getElementById('ham-btn');
     const navLinks = document.getElementById("nav-links");
 
@@ -23,28 +23,43 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Scroll into view com verificações
+    // ===== Scroll suave =====
     if (inicio && inicioin) {
-        inicio.addEventListener("click", function() {
+        inicio.addEventListener("click", function () {
             inicioin.scrollIntoView({ behavior: "smooth" });
         });
     }
 
     if (sobre && sobrein) {
-        sobre.addEventListener("click", function() {
+        sobre.addEventListener("click", function () {
             sobrein.scrollIntoView({ behavior: "smooth" });
         });
     }
 
     if (personagem && personagemin) {
-        personagem.addEventListener("click", function() {
+        personagem.addEventListener("click", function () {
             personagemin.scrollIntoView({ behavior: "smooth" });
         });
     }
 
     if (galeria && galeriain) {
-        galeria.addEventListener("click", function() {
+        galeria.addEventListener("click", function () {
             galeriain.scrollIntoView({ behavior: "smooth" });
+        });
+    }
+
+    // ===== Modal de Imagem (Galeria) =====
+    const galleryImages = document.querySelectorAll('.gallery-img');
+    const modalImage = document.getElementById('modalImage');
+
+    if (galleryImages.length > 0 && modalImage) {
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                const src = img.getAttribute('src');
+                modalImage.setAttribute('src', src);
+                const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+                modal.show();
+            });
         });
     }
 });

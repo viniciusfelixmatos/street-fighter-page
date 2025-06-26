@@ -48,18 +48,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ===== Modal de Imagem (Galeria) =====
-    const galleryImages = document.querySelectorAll('.gallery-img');
-    const modalImage = document.getElementById('modalImage');
-
-    if (galleryImages.length > 0 && modalImage) {
-        galleryImages.forEach(img => {
-            img.addEventListener('click', () => {
-                const src = img.getAttribute('src');
-                modalImage.setAttribute('src', src);
-                const modal = new bootstrap.Modal(document.getElementById('imageModal'));
-                modal.show();
-            });
-        });
-    }
 });

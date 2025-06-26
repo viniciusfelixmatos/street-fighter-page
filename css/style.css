@@ -24,7 +24,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 30px;
+    gap: 60px;
     transition: all 0.3s ease;
 }
 
@@ -33,6 +33,7 @@
     font-family: "Oswald", sans-serif;
     font-size: 18px;
     text-decoration: none;
+    transition: color 0.4s ease, transform 0.4s ease;
 }
 
 .links-box a:hover {
@@ -80,7 +81,7 @@
     text-align: center;
     justify-items: center;
     background-image: url(../images/main-img.png);
-    background-position: center bottom;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -201,6 +202,7 @@
     cursor: pointer;
     z-index: 1;
     margin-bottom: 20px;
+    transition: transform 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease;
 }
 
 .juri-image img {
@@ -209,8 +211,10 @@
 }
 
 .box-images:hover {
-    transform: scale(1.1);
-    transition: all 0.5s ease-out;
+    transform: scale(1.08);
+    filter: brightness(1.1) contrast(1.05);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7);
+    z-index: 2;
 }
 
 .box-images img {
@@ -280,6 +284,13 @@
 }
 
 /* RESPONSIVO */
+
+@media (min-width: 1440px) {
+    .introduction-area {
+        background-size: 100% 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .hamburguer-icon {
         display: flex;

@@ -285,9 +285,27 @@
 
 /* RESPONSIVO */
 
-@media (min-width: 1440px) {
-    .introduction-area {
-        background-size: 100% 100%;
+@media (max-width: 1440px) {
+    .box-images {
+        max-width: 270px;
+        max-height: 540px;
+    }
+
+    .box-images img {
+        width: 270px;
+        height: 540px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .box-images {
+        max-width: 200px;
+        max-height: 400px;
+    }
+
+    .box-images img {
+        width: 200px;
+        height: 400px;
     }
 }
 
